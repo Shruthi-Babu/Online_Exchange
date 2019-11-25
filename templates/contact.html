@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+
+<style type="text/css">
+    .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+  transition: 0.5s;
+  width: 45%;
+  background-color: rgba(255,255, 255, 1);
+  border-radius: 14px;
+
+}
+
+.card:hover {
+  box-shadow: 0 28px 28px 0 rgba(0,0,0,0.8);
+}
+.p, h1
+{
+text-align:center;
+}
+</style>
+<div class="card border-info container mt-5">
+    <h1 style="padding-top:20px;">Contact Us:</h1>
+    <img src="static/contactus.svg" style="width:300px; height:300px; margin-left:80px;"/>
+    <p>India: 1234567890</p>
+    <p>email: contact@onlinexchange.com</p>
+</div>
+{% endblock %}

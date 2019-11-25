@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Shopping</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/stylesheets/stylesheet.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+
+</head>
+<body background="/static/back.jpeg" style="background-size: cover">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+     <div class="collapse navbar-collapse" id="navbarNav">
+
+              <ul class="navbar-nav">
+                <li class="nav-item " style="font-size:medium" ><a class="nav-link" href="/">Home</a></li>
+                <li class="nav-item" ><a class="nav-link" href="/about">About</a></li>
+                <li class="nav-item" ><a class="nav-link" href="/admin-logout">Logout</a> </li>
+                <li class="nav-item" ><a class="nav-link" href="/admin">Admin Home</a> </li>
+
+              </ul>
+     </div>
+</nav>
+
+<h3 class="mt-3 mb-5" style="text-align:center" >All orders</h3>
+<table class="table table-striped" width="200">
+<thead>
+    <tr>
+      <th scope="col">Order ID</th>
+      <th scope="col">Customer</th>
+      <th scope="col">Model</th>
+      <th scope="col">Cost</th>
+      <th scope="col">Delivery Boy</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for o in orders %}
+    <tr>
+        <td>{{o[0]}}</td>
+        <td>{{o[1]}} </td>
+        <td> {{o[2]}}</td>
+        <td> {{o[3]}}</td>
+        <td> {{o[4]}}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+
+</table>
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</body>
+</html>

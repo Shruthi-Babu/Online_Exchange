@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<style>
+  .card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
+  transition: 0.5s;
+  width: 45%;
+  height:40%;
+  background-color: rgba(255,255, 255, 1);
+  border-radius: 14px;
+
+}
+
+.card:hover {
+  box-shadow: 0 28px 28px 0 rgba(0,0,0,0.9);
+}
+
+
+</style>
+  <div class="card border-info container mt-5">
+    <h1 style="text-align:center; font-family: 'merriweather', cursive, bold;padding-top:20px;">About Us</h1>
+    <img src="static/aboutus.svg" style="width:300px; height:300px; margin-left:70px; "/>
+    <p class="lead" style="text-align:center;"><bold>Online Exchange</bold> - marketplace is a platform for buying and selling services and goods such as electronics, fashion items, furniture, household goods, cars and bikes.</p>
+  </div>
+
+
+
+
+{% endblock %}

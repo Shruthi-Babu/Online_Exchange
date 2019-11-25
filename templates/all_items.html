@@ -1,0 +1,80 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<style>
+.modal-content
+{
+    width:500px;
+    height:300px;
+    background-color:white;
+    opacity:1;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+	border-radius: 4px;
+}
+.bg-modal {
+	background-color: rgba(0, 0, 0, 0.8);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.5s;
+  background-color: rgba(255,255, 255, 1);
+   font-family: 'merriweather', cursive, bold;
+}
+
+.card:hover {
+  box-shadow: 0 28px 28px 0 rgba(0,0,0,0.7);
+}
+</style>
+
+
+<!--<div class="bg-modal">-->
+<!--    <div class="model-content">-->
+<!--        <img src="static/orderconfirm.svg" alt="Order Successful">-->
+<!--    </div>-->
+<!--</div>-->
+
+<!--<script>-->
+<!--document.getElementById('button').addEventListener("click", function() {-->
+<!--	document.querySelector('.bg-modal').style.display = "flex";-->
+<!--});-->
+
+<!--document.querySelector('.close').addEventListener("click", function() {-->
+<!--	document.querySelector('.bg-modal').style.display = "none";-->
+<!--});-->
+<!-- </script>-->
+
+<h1  style="text-align:center; color: black; padding-top:15px; font-family:'Proxima Nova';">{{category}}</h1>
+<div class="row">
+    {% for p in items %}
+        <div class="col-md-3">
+            <div class="card mt-3 mb-3 border border-primary " style="background: white; color:black; width:250px;">
+                <img class="card-img-top" src="{{ p[6] }}" alt="Mobile Demo" height="225" width="35" />
+                <div class="card-body">
+                    <h4 class="card-title">{{ p[1] }} </h4>
+                     <div>
+                         <p class="card-text">Owner ID: {{ p[5] }}</p>
+                         <p class="card-text">How old: {{ p[4] }} yrs</p>
+                         <p class="card-text">Cost: Rs {{ p[3] }}</p>
+                     </div>
+
+                     <div class="text-center mt-2"> <a href="{{ url_for('place_order', item_id=p[0]) }}" class="btn button btn-primary">Place Order</a></div>
+
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="container" style=" background-size: cover; background-repeat: no-repeat; background-position: center; height=100%; ">
+  <h1 style="text-align:center; padding-top:10px;">Welcome! </h1>
+</div>
+
+
+<div class="row" style="text-align:center;">
+    <div class="col-md">
+    <div class="jumbotron">
+      <h1 class="display-5">Buy stuffs here!</h1>
+      <p class="lead"> Looking to buy refurbished/used items?</p>
+      <hr class="my-4">
+      <p>This is the perfect destination for all your needs!</p>
+      <p class="lead" style="padding-left:0px;padding-top:30px;">
+          <a class="btn btn-primary btn-lg"  href="/dashboard" role="button">BUY</a>
+      </p>
+    </div>
+</div>
+    <div class="col-md">
+<div class="jumbotron">
+  <h1 class="display-5">Sell stuffs here!</h1>
+  <p class="lead"> Planning to move out/ free up some space?</p>
+  <hr class="my-4">
+  <p>This is the perfect place to sell your used products!</p>
+  <p class="lead" style="padding-left:0px;padding-top:30px;">
+    <a class="btn btn-primary btn-lg"  href="/sell" role="button">SELL</a>
+  </p>
+</div>
+    </div>
+
+</div>
+<!--
+<button type="button" class="btn btn-dark" style="text-align: center;display: inline-block;  position: absolute;top: 50%;  left: 30%;">BUY</button>
+<button type="button" class="btn btn-dark" style="text-align: center;display: inline-block;  position: absolute;top: 50%;  left: 60%;">SELL</button>
+-->
+
+{% endblock %}
